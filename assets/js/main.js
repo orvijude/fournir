@@ -1,0 +1,76 @@
+$('.hamburger').click(function(){
+    $(this).toggleClass("active");
+    $('nav').toggleClass("show");
+    $('nav li').removeClass('active');
+    $('.submenu').removeClass('show');
+})
+$('#furnitures').click(function(){
+    $('#furnitures-menu').toggleClass('show');
+    $(this).toggleClass('active');
+    $(this).parent().children('li').not(this).removeClass('active');
+    $('#lightings-menu').removeClass('show');
+    $('#decors-menu').removeClass('show');
+    $('#curtains-menu').removeClass('show');
+})
+$('#lightings').click(function(){
+    $('#lightings-menu').toggleClass('show');
+    $(this).toggleClass('active');
+    $(this).parent().children('li').not(this).removeClass('active');
+    $('#furnitures-menu').removeClass('show');
+    $('#decors-menu').removeClass('show');
+    $('#curtains-menu').removeClass('show');
+})
+$('#decors').click(function(){
+    $('#decors-menu').toggleClass('show');
+    $(this).toggleClass('active');
+    $(this).parent().children('li').not(this).removeClass('active');
+    $('#lightings-menu').removeClass('show');
+    $('#furnitures-menu').removeClass('show');
+    $('#curtains-menu').removeClass('show');
+})
+$('#curtains').click(function(){
+    $('#curtains-menu').toggleClass('show');
+    $(this).toggleClass('active');
+    $(this).parent().children('li').not(this).removeClass('active');
+    $('#lightings-menu').removeClass('show');
+    $('#decors-menu').removeClass('show');
+    $('#furnitures-menu').removeClass('show');
+})
+$('.back').click(function(){
+    $('.submenu').removeClass('show');
+    $('.nav-links li').removeClass('active');
+})
+
+$('.shop-menu li').click(function(){
+    $(this).toggleClass('active');
+    $(this).parent().children('li').not(this).removeClass('active');
+    $('#sub-furn').removeClass('show');
+    $('#sub-light').removeClass('show');
+    $('#sub-dec').removeClass('show');
+    $('#sub-curt').removeClass('show');
+})
+
+$('#furn').click(function(){
+    $('#sub-furn').toggleClass('show');
+    $('#sub-light').removeClass('show');
+    $('#sub-dec').removeClass('show');
+    $('#sub-curt').removeClass('show');
+})
+$('#lig').click(function(){
+    $('#sub-furn').removeClass('show');
+    $('#sub-light').toggleClass('show');
+    $('#sub-dec').removeClass('show');
+    $('#sub-curt').removeClass('show');
+})
+$('#dec').click(function(){
+    $('#sub-furn').removeClass('show');
+    $('#sub-light').removeClass('show');
+    $('#sub-dec').toggleClass('show');
+    $('#sub-curt').removeClass('show');
+})
+$('#curt').click(function(){
+    $('#sub-furn').removeClass('show');
+    $('#sub-light').removeClass('show');
+    $('#sub-dec').removeClass('show');
+    $('#sub-curt').toggleClass('show');
+})

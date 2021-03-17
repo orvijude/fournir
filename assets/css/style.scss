@@ -1,0 +1,36 @@
+
+// ####### IMPORTS
+@import './variables/fonts';
+@import './variables/colors';
+@import './site/header';
+@import './site/home';
+@import './site/coming-soon';
+@import './site/shop';
+@import './site/product';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: $line-height-header;
+}
+
+p {
+    font-size: 16px;
+    line-height: $line-height-regular;
+}
+
+a {
+    text-decoration: none;
+}

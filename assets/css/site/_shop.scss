@@ -1,0 +1,129 @@
+.shop-product-wrapper {
+    padding: 50px 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.shop-menu-container {
+    width: 15%;
+    margin: 0 100px 0 0;
+    h1 {
+        margin: 0 0 40px 0;
+        font-size: 40px;
+    }
+}
+
+.shop-menu {
+    list-style: none;
+    & > li {
+        opacity: 0.57;
+        margin: 0 0 30px 0;
+        font-size: 25px;
+        cursor: pointer;
+        &.active, &:hover {
+            opacity: 1;
+        }
+        #sub-furn, #sub-light, #sub-dec, #sub-curt{
+            display: none;
+            list-style: none;
+            padding: 10px 0 0 10px;
+            &.show {
+                display: block;
+            }
+        }
+        li {
+            font-size: 20px;
+            margin: 10px 0;
+            font-weight: 400;
+            color: $black;
+            opacity: 0.57;
+            &.active, &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.product-container {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    .load-more {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 20px 40px;
+        color: $black;
+        border: 2px solid $black;
+        font-weight: 700;
+    }
+}
+.product-card {
+    width: 270px;
+    height: 390px;
+    color: $black;
+    margin: 0 0 50px 0;
+    &:hover {
+        transform: scale(1.03);
+    }
+    h1, h2 {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    .img-container {
+        width: 270px;
+        height: 300px;
+        background-color: $grey;
+        position: relative;
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 859px) {
+    .shop-product-wrapper {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    .shop-menu-container {
+        width: 100%;
+        margin: 20px 0;
+        ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+
+    .product-container {
+        width: 100%;
+        text-align: center;
+        .product-card {
+            width: 50%;
+            .img-container {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .product-container {
+        flex-direction: column;
+        .product-card {
+            width: 100%;
+        }
+    }
+}
